@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d4f91">
+  <meta name="description" content="Contact RUSH about your account, an order, a delivery, a payment or anything else.">
+  <title>Contact · RUSH</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body data-page="contact">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head" data-site-head></header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="page-title">
+      <div class="wrap grid-2">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h1 id="page-title">We are here to help</h1>
+          <p class="lead">Send us a message about your account, an order, a delivery, a payment or a health service. For anything urgent in the app, use the support option in the RUSH app.</p>
+          <ul class="checks" style="margin-top:24px">
+            <li hidden><span data-icon="mail" data-size="20"></span><span>Email: <a href="mailto:" data-company="support_email"></a></span></li>
+            <li hidden><span data-icon="phone" data-size="20"></span><span data-company="support_phone"></span></li>
+            <li hidden><span data-icon="pin" data-size="20"></span><span data-company="address"></span></li>
+          </ul>
+          <div class="callout bad" style="margin-top:28px">
+            <strong>Medical emergency?</strong> Call 911 or go to the nearest hospital. RUSH health services do not replace emergency care.
+          </div>
+          <p class="note" style="margin-top:20px">To ask about your personal data, use the <a href="privacy.html#request">privacy request form</a>.</p>
+        </div>
+
+        <div class="form-card">
+          <h2 style="font-size:1.4rem">Send a message</h2>
+          <form class="form" data-form="inquiry" data-kind="contact">
+            <div class="form-grid">
+              <div class="field">
+                <label for="c-name">Your name</label>
+                <input id="c-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="100" required>
+              </div>
+              <div class="field">
+                <label for="c-email">Email</label>
+                <input id="c-email" name="email" type="email" autocomplete="email" maxlength="160">
+                <span class="hint">Or give a mobile number below.</span>
+              </div>
+              <div class="field">
+                <label for="c-phone">Mobile number</label>
+                <input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="09XXXXXXXXX">
+              </div>
+              <div class="field">
+                <label for="c-subject">Topic</label>
+                <select id="c-subject" name="subject">
+                  <option value="General">General question</option>
+                  <option value="Order">An order</option>
+                  <option value="Delivery or cargo">A delivery or cargo booking</option>
+                  <option value="Payment or RushPay">Payment or RushPay</option>
+                  <option value="Account">My account</option>
+                  <option value="Health service">A health service (RushMedz)</option>
+                  <option value="Other">Something else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-message">Your message</label>
+              <textarea id="c-message" name="message" minlength="5" maxlength="3000" required></textarea>
+            </div>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="consent">
+              <input type="checkbox" name="consent" required>
+              <span>I agree that RUSH may use these details to reply to my message, as described in the <a href="privacy.html">Privacy Notice</a>.</span>
+            </label>
+            <button class="btn btn-primary btn-block" type="submit">Send message</button>
+          </form>
+          <p class="status" data-status role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint" aria-labelledby="apps-help-title">
+      <div class="wrap grid-2">
+        <div class="card">
+          <div class="icon-tile" data-icon="chat" data-size="26"></div>
+          <h2 id="apps-help-title" style="font-size:1.35rem">Help inside the apps</h2>
+          <p>Signed-in users can contact support from the account menu in every RUSH app, including RushPay. The request is linked to your account, so you do not need to repeat your details.</p>
+          <div data-store-badges="app" aria-label="Download the RUSH app"></div>
+          <div data-store-badges="pay" aria-label="Download RushPay"></div>
+        </div>
+        <div class="card">
+          <div class="icon-tile gold" data-icon="store" data-size="26"></div>
+          <h2 style="font-size:1.35rem">For partners</h2>
+          <p>Stores, restaurants, pharmacies, drivers, doctors and health facilities each have a partner app on Google Play and the App Store, with the same RUSH account.</p>
+          <a class="portal" href="apps.html#partners">See the partner apps <span data-icon="arrow-right" data-size="16"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="head-row">
+          <div>
+            <p class="eyebrow">What RUSH offers</p>
+            <h2 id="more-title">The industries we serve</h2>
+            <p class="lead">Tell us which service your message is about, so it reaches the right team.</p>
+          </div>
+        </div>
+        <div class="grid" data-industries="contact"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot" data-site-foot></footer>
+  <script src="config.js"></script>
+  <script src="assets/rush-icons.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

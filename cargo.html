@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d4f91">
+  <meta name="description" content="RushCargo delivers items across the Philippines. Choose the vehicle that fits your load, book in the RUSH app and pay through RushPay. Drivers work with the RushCargo app.">
+  <title>Cargo · RUSH</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body data-page="cargo">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head" data-site-head></header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="eyebrow">Logistics and cargo</p>
+        <h1 id="page-title">Move items from one place to another</h1>
+        <p class="lead">RushCargo is the logistics arm of RUSH. It delivers every order from RUSH stores, restaurants and pharmacies, and you can book it to move any item you need, from a motorcycle for a small parcel to a large van for bulk stock. Follow it until it is delivered.</p>
+        <div data-store-badges="app" aria-label="Download the RUSH app"></div>
+        <p class="note">Book cargo in the RUSH app. Drivers use the RushCargo app.</p>
+      </div>
+    </section>
+
+    <section class="section tint" aria-labelledby="rule-title">
+      <div class="wrap">
+        <div class="callout" role="note">
+          <strong id="rule-title">RushCargo moves items only.</strong> People, animals, weapons and illegal or dangerous goods are never carried. Bookings that break this rule are refused.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="vehicles-title">
+      <div class="wrap">
+        <div class="head-row">
+          <div>
+            <p class="eyebrow">Vehicles</p>
+            <h2 id="vehicles-title">Choose the vehicle for your load</h2>
+            <p class="lead">Each vehicle lists its weight limit, cargo space and examples. RUSH also suggests the smallest vehicle that fits the weight and size of your items.</p>
+          </div>
+        </div>
+        <div class="grid" data-vehicles aria-live="polite">
+          <div class="skeleton" aria-hidden="true"></div>
+          <div class="skeleton" aria-hidden="true"></div>
+          <div class="skeleton" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint" aria-labelledby="book-title">
+      <div class="wrap grid-2">
+        <div class="card">
+          <div class="icon-tile" data-icon="box" data-size="26"></div>
+          <h2 id="book-title" style="font-size:1.4rem">How booking works</h2>
+          <ol class="steps" style="grid-template-columns:1fr;margin-top:16px">
+            <li><h3>Set the pickup and drop-off</h3><p>Enter both addresses. The distance and fare are calculated before you book.</p></li>
+            <li><h3>Describe the item</h3><p>Give the category, a description, the weight and the number of pieces, so the right vehicle is offered.</p></li>
+            <li><h3>Pay and get a driver</h3><p>Pay through RushPay. Once the payment is confirmed, the job goes to nearby drivers whose vehicle can carry the load.</p></li>
+            <li><h3>Hand over and track</h3><p>Follow the driver on the map, and give the handover PIN when the item arrives.</p></li>
+          </ol>
+        </div>
+        <div class="card">
+          <div class="icon-tile gold" data-icon="id" data-size="26"></div>
+          <h2 id="driver-title" style="font-size:1.4rem">Become a RushCargo driver</h2>
+          <p>Drivers apply in the RushCargo app with their licence, vehicle and documents. Once approved, you go online when you are ready to work and see the jobs your vehicle can carry near you. You can filter jobs by distance, and your earnings are paid out to the bank, GCash or Maya account you add.</p>
+          <div data-store-badges="cargo" aria-label="Download RushCargo"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="head-row">
+          <div>
+            <p class="eyebrow">More from RUSH</p>
+            <h2 id="more-title">The industries RushCargo delivers for</h2>
+            <p class="lead">RushCargo drivers carry orders for every RUSH store, restaurant and pharmacy, on the same account customers use for health care and RushPay.</p>
+          </div>
+        </div>
+        <div class="grid" data-industries="cargo"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot" data-site-foot></footer>
+  <script src="config.js"></script>
+  <script src="assets/rush-icons.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

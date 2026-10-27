@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d4f91">
+  <meta name="description" content="Order food from restaurants in the RUSH app, delivered by RushCargo and paid through RushPay. Restaurants sell on RUSH with RushFood.">
+  <title>Food · RUSH</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body data-page="food">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head" data-site-head></header>
+
+  <main id="main">
+    <section class="section" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="eyebrow">Restaurants and food</p>
+        <h1 id="page-title">Restaurant food, delivered to you</h1>
+        <p class="lead">Order from restaurants and food providers near you. Each restaurant sets its preparation time and minimum order, and you see both before you pay. A RushCargo rider delivers your meal.</p>
+        <div data-store-badges="app" aria-label="Download the RUSH app"></div>
+        <p class="note">Order food in the RUSH app, on Android and iPhone.</p>
+      </div>
+    </section>
+
+    <section class="section tint" aria-labelledby="order-title">
+      <div class="wrap grid-2">
+        <div class="card">
+          <div class="icon-tile" data-icon="food" data-size="26"></div>
+          <h2 id="order-title" style="font-size:1.4rem">How ordering works</h2>
+          <ul class="checks" style="margin-top:12px">
+            <li><span data-icon="check-circle" data-size="20"></span>Find restaurants by name, cuisine and distance.</li>
+            <li><span data-icon="check-circle" data-size="20"></span>See each restaurant's opening status, preparation time and minimum order.</li>
+            <li><span data-icon="check-circle" data-size="20"></span>Add dishes with notes, such as no onions, and check the total with delivery.</li>
+            <li><span data-icon="check-circle" data-size="20"></span>Pay through RushPay at checkout. The restaurant gets your order once the payment is confirmed, and you follow it to your door.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="icon-tile gold" data-icon="store" data-size="26"></div>
+          <h2 id="restaurant-title" style="font-size:1.4rem">For restaurants</h2>
+          <p>RushFood is the restaurant app. Restaurant owners use it to:</p>
+          <ul class="checks" style="margin-top:12px">
+            <li><span data-icon="check-circle" data-size="20"></span>Receive new orders as they come in, and accept, prepare, mark ready or reject them.</li>
+            <li><span data-icon="check-circle" data-size="20"></span>Set the menu, prices, sale prices and availability for each dish.</li>
+            <li><span data-icon="check-circle" data-size="20"></span>Set preparation time, minimum order, delivery radius and opening hours.</li>
+            <li><span data-icon="check-circle" data-size="20"></span>Follow sales, deliveries and reviews. Sales are paid out to the bank, GCash or Maya account the restaurant adds.</li>
+          </ul>
+          <div data-store-badges="food" aria-label="Download RushFood"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="delivery-title">
+      <div class="wrap">
+        <div class="panel">
+          <p class="eyebrow">Delivery</p>
+          <h2 id="delivery-title">Riders from RushCargo</h2>
+          <p>Each restaurant order is booked to RushCargo as soon as the restaurant accepts it. Nearby drivers who can carry the order are offered the job, and the rider collects it from the restaurant and brings it to you. You get a handover PIN for the drop-off.</p>
+          <div class="btn-row">
+            <a class="btn btn-light" href="cargo.html">How RushCargo works</a>
+            <a class="btn btn-outline-light" href="pay.html">About RushPay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint" aria-labelledby="more-title">
+      <div class="wrap">
+        <div class="head-row">
+          <div>
+            <p class="eyebrow">More from RUSH</p>
+            <h2 id="more-title">Every industry on one account</h2>
+            <p class="lead">The account you order food with also shops groceries and medicines, books deliveries and health care, and sends money with RushPay.</p>
+          </div>
+        </div>
+        <div class="grid" data-industries="food"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot" data-site-foot></footer>
+  <script src="config.js"></script>
+  <script src="assets/rush-icons.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
