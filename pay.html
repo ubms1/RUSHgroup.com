@@ -8,9 +8,18 @@
   <title>RushPay · Remittance, bills and load · RUSH</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUSH">
+  <meta property="og:title" content="RushPay · Remittance, bills and load">
+  <meta property="og:description" content="RushPay sends money in the Philippines and abroad, pays bills, buys prepaid load and receives money with a real-time QR code. It is how RUSH apps take payment.">
+  <meta property="og:url" content="https://ubms1.github.io/RUSHgroup.com/pay.html">
+  <meta property="og:image" content="https://ubms1.github.io/RUSHgroup.com/assets/rush-logo.png">
+  <meta property="og:image:alt" content="RUSH logo">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="site.css">
 </head>
 <body data-page="pay">
@@ -18,8 +27,8 @@
   <header class="site-head" data-site-head></header>
 
   <main id="main">
-    <section class="section" aria-labelledby="page-title">
-      <div class="wrap grid-2" style="align-items:center">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap">
         <div>
           <p class="eyebrow">RushPay · Remittance and payments</p>
           <h1 id="page-title">Send money, pay bills and buy load with RushPay</h1>
@@ -27,11 +36,25 @@
           <div data-store-badges="pay" aria-label="Download RushPay"></div>
           <p class="note">RushPay is a separate mobile app. Sign in with your RUSH account.</p>
         </div>
-        <div class="card">
-          <div class="icon-tile gold" data-icon="shield" data-size="26"></div>
-          <h2 style="font-size:1.35rem">What RushPay is</h2>
-          <p><strong style="color:var(--ink)">RushPay is a Money Service Business (Remittance and Transfer Company and Remittance Platform Provider). It is not a bank or an electronic money issuer, and it does not hold deposits or stored-value balances.</strong></p>
-          <p style="margin-top:12px">Money passes straight through. Every payment is funded when it is made and sent onward to its recipient. RushPay never holds a balance.</p>
+        <div class="hero-art" aria-hidden="true">
+          <span class="float-tile t1"><span data-tile="pay" data-size="88"></span></span>
+          <span class="float-tile t2"><span data-tile="send" data-size="88"></span></span>
+          <div class="hero-logo"><img src="assets/rush-logo.png" alt="" width="300" height="300" decoding="async" fetchpriority="high"></div>
+          <span class="float-tile t3"><span data-tile="bills" data-size="88"></span></span>
+          <span class="float-tile t4"><span data-tile="qr" data-size="88"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="what-title">
+      <div class="wrap">
+        <div class="card statement-card">
+          <span data-tile="shield" data-size="72"></span>
+          <div>
+            <h2 id="what-title" style="font-size:1.35rem">What RushPay is</h2>
+            <p><strong style="color:var(--ink)">RushPay is a Money Service Business (Remittance and Transfer Company and Remittance Platform Provider). It is not a bank or an electronic money issuer, and it does not hold deposits or stored-value balances.</strong></p>
+            <p style="margin-top:12px">Money passes straight through. Every payment is funded when it is made and sent onward to its recipient. RushPay never holds a balance.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -46,32 +69,32 @@
         </div>
         <ul class="feature-list">
           <li>
-            <div class="icon-tile gold" data-icon="send" data-size="22"></div>
+            <span data-tile="send" data-size="56"></span>
             <h3>Send money</h3>
             <p>Send money to people in the Philippines and abroad. Choose where it lands: a bank account, GCash, Maya, cash pickup or another RUSH user. The fee and the total are shown before you confirm.</p>
           </li>
           <li>
-            <div class="icon-tile gold" data-icon="receipt" data-size="22"></div>
+            <span data-tile="bills" data-size="56"></span>
             <h3>Pay bills</h3>
             <p>Find your biller in the app by category or name, enter your account number with the biller and pay. Each bill payment gets its own reference.</p>
           </li>
           <li>
-            <div class="icon-tile gold" data-icon="phone" data-size="22"></div>
+            <span data-tile="load" data-size="56"></span>
             <h3>Buy load</h3>
             <p>Buy prepaid mobile load for a number on a supported network. Pick an amount from the choices shown and the load is sent to the number you enter.</p>
           </li>
           <li>
-            <div class="icon-tile gold" data-icon="qr" data-size="22"></div>
+            <span data-tile="qr" data-size="56"></span>
             <h3>Receive money with a real-time QR code</h3>
             <p>Show your RushPay QR code to get paid. The code refreshes every minute, so an old screenshot cannot be used again. Money sent to you goes straight to the bank, GCash or Maya account you choose for payouts.</p>
           </li>
           <li>
-            <div class="icon-tile gold" data-icon="cart" data-size="22"></div>
+            <span data-tile="grocery" data-size="56"></span>
             <h3>Pay for RUSH orders, deliveries and appointments</h3>
             <p>RushPay takes payment for groceries, food, medicines, cargo bookings and health appointments in the RUSH app. The store, driver or health provider is paid after the service is done.</p>
           </li>
           <li>
-            <div class="icon-tile gold" data-icon="list" data-size="22"></div>
+            <span data-tile="clock" data-size="56"></span>
             <h3>One activity list</h3>
             <p>Every remittance, bill, load and RUSH payment appears in one list with its status, so you can see when each one is paid and sent.</p>
           </li>
@@ -105,7 +128,7 @@
     <section class="section tint" aria-labelledby="benefits-title">
       <div class="wrap grid-2">
         <div class="card">
-          <div class="icon-tile" data-icon="check-circle" data-size="26"></div>
+          <span data-tile="success" data-size="64"></span>
           <h2 id="benefits-title" style="font-size:1.35rem">Benefits</h2>
           <ul class="checks" style="margin-top:12px">
             <li><span data-icon="check-circle" data-size="20"></span>One RUSH account for RushPay and every RUSH app.</li>
@@ -116,7 +139,7 @@
           </ul>
         </div>
         <div class="card">
-          <div class="icon-tile gold" data-icon="lock" data-size="26"></div>
+          <span data-tile="shield" data-size="64"></span>
           <h2 style="font-size:1.35rem">Safety and privacy</h2>
           <ul class="checks" style="margin-top:12px">
             <li><span data-icon="check-circle" data-size="20"></span>Your six-digit PIN approves every send, bill payment and load purchase.</li>

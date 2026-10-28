@@ -14,12 +14,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#1d4f91">
   <meta name="robots" content="noindex">
+  <meta name="description" content="The page you asked for could not be found on the RUSH website.">
   <title>Page not found · RUSH</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUSH">
+  <meta property="og:title" content="Page not found · RUSH">
+  <meta property="og:description" content="The page you asked for could not be found on the RUSH website.">
+  <meta property="og:image" content="https://ubms1.github.io/RUSHgroup.com/assets/rush-logo.png">
+  <meta property="og:image:alt" content="RUSH logo">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="site.css">
 </head>
 <body data-page="notfound">
@@ -38,9 +47,14 @@
             <a class="btn btn-outline-light" href="apps.html">Get the RUSH apps</a>
           </div>
         </div>
-        <div class="hero-card">
-          <img src="assets/rush-logo.png" alt="RUSH, Everything, Delivered" width="300" height="300">
-          <p>One account for every RUSH service.</p>
+        <div class="hero-side">
+          <div class="hero-art" aria-hidden="true">
+            <span class="float-tile t1"><span data-tile="empty" data-size="88"></span></span>
+            <span class="float-tile t2"><span data-tile="pin" data-size="88"></span></span>
+            <div class="hero-logo"><img src="assets/rush-logo.png" alt="" width="300" height="300" decoding="async" fetchpriority="high"></div>
+            <span class="float-tile t3"><span data-tile="box" data-size="88"></span></span>
+          </div>
+          <p class="hero-caption">One account for every RUSH service.</p>
         </div>
       </div>
     </section>

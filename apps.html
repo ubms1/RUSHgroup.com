@@ -4,13 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#1d4f91">
-  <meta name="description" content="Every RUSH mobile app: the RUSH app and RushPay for customers, and RushGrocery, RushFood, RushPharma, RushCargo, RushDoctor and RushClinic for partners. Download from Google Play or the App Store.">
+  <meta name="description" content="Every RUSH mobile app: the RUSH app and RushPay for customers, and RushGrocery, RushFood, RushPharma, RushCargo, RushTranspo, RushEssentials, RushDoctor and RushClinic for partners. Download from Google Play or the App Store.">
   <title>Apps · RUSH</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUSH">
+  <meta property="og:title" content="Apps · RUSH">
+  <meta property="og:description" content="The RUSH app and RushPay for customers, and RushGrocery, RushFood, RushPharma, RushCargo, RushTranspo, RushEssentials, RushDoctor and RushClinic for partners.">
+  <meta property="og:url" content="https://ubms1.github.io/RUSHgroup.com/apps.html">
+  <meta property="og:image" content="https://ubms1.github.io/RUSHgroup.com/assets/rush-logo.png">
+  <meta property="og:image:alt" content="RUSH logo">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="site.css">
 </head>
 <body data-page="apps">
@@ -18,16 +27,25 @@
   <header class="site-head" data-site-head></header>
 
   <main id="main">
-    <section class="section" aria-labelledby="page-title">
+    <section class="hero" aria-labelledby="page-title">
       <div class="wrap">
-        <p class="eyebrow">Apps</p>
-        <h1 id="page-title">Every RUSH app, in one place</h1>
-        <p class="lead">Customers use the RUSH app and RushPay. Stores, restaurants, pharmacies, drivers, doctors and health facilities each have their own partner app. Every app uses the same RUSH account.</p>
-        <p class="note">Each app shows a Google Play and an App Store badge. A badge marked Coming soon becomes a download link as soon as that listing is published.</p>
-        <nav class="btn-row" style="margin-top:22px" aria-label="Jump to an app">
-          <a class="btn btn-ghost" href="#customers">For customers</a>
-          <a class="btn btn-ghost" href="#partners">For partners</a>
-        </nav>
+        <div>
+          <p class="eyebrow">Apps</p>
+          <h1 id="page-title">Every RUSH app, in one place</h1>
+          <p class="lead">Customers use the RUSH app and RushPay. Stores, restaurants, pharmacies, drivers, essentials merchants, doctors and health facilities each have their own partner app. Every app uses the same RUSH account.</p>
+          <p class="note">Each app shows a Google Play and an App Store badge. A badge marked Coming soon becomes a download link as soon as that listing is published.</p>
+          <nav class="btn-row" style="margin-top:22px" aria-label="Jump to an app">
+            <a class="btn btn-light" href="#customers">For customers</a>
+            <a class="btn btn-outline-light" href="#partners">For partners</a>
+          </nav>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="float-tile t1"><span data-tile="grocery" data-size="88"></span></span>
+          <span class="float-tile t2"><span data-tile="pay" data-size="88"></span></span>
+          <div class="hero-logo"><img src="assets/rush-logo.png" alt="" width="300" height="300" decoding="async" fetchpriority="high"></div>
+          <span class="float-tile t3"><span data-tile="truck" data-size="88"></span></span>
+          <span class="float-tile t4"><span data-tile="doctor" data-size="88"></span></span>
+        </div>
       </div>
     </section>
 
@@ -36,20 +54,22 @@
         <div class="head-row">
           <div>
             <p class="eyebrow">For customers</p>
-            <h2 id="customers-title">Shop, book, send and pay</h2>
+            <h2 id="customers-title">Shop, ride, book, send and pay</h2>
           </div>
         </div>
         <div class="app-list">
           <article class="card app-entry" id="app" aria-labelledby="app-name">
             <div class="app-head">
-              <div class="icon-tile" data-icon="home" data-size="26"></div>
+              <span data-tile="grocery" data-size="64"></span>
               <div>
                 <h3 id="app-name">RUSH app</h3>
-                <p class="who">For customers: shoppers, senders and patients</p>
+                <p class="who">For customers: shoppers, riders, senders and patients</p>
               </div>
             </div>
             <ul class="checks">
               <li><span data-icon="check-circle" data-size="20"></span>Shop groceries, restaurant food and pharmacy items from stores near you, with prices, stock and the delivery fee shown before you pay.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Book a ride with RushTranspo in Tuguegarao and across Cagayan Valley: motorcycle taxi, tricycle or car, with the fare shown before you book and a 4-digit boarding code.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Order appliances, parts, hardware, electrical supplies and apparel from RushEssentials stores, delivered in a vehicle that can carry them.</li>
               <li><span data-icon="check-circle" data-size="20"></span>Book a RushCargo delivery for any item, in a vehicle that fits its weight and size, and follow the driver on the map.</li>
               <li><span data-icon="check-circle" data-size="20"></span>Book doctors for video or in-person consultations, and clinics, laboratories and hospitals for their services.</li>
               <li><span data-icon="check-circle" data-size="20"></span>Keep your prescriptions and lab results in one place, and order prescribed medicines from a pharmacy.</li>
@@ -60,7 +80,7 @@
 
           <article class="card app-entry" id="pay" aria-labelledby="pay-name">
             <div class="app-head">
-              <div class="icon-tile gold" data-icon="send" data-size="26"></div>
+              <span data-tile="pay" data-size="64"></span>
               <div>
                 <h3 id="pay-name">RushPay</h3>
                 <p class="who">For customers who send money, pay bills or buy load</p>
@@ -92,7 +112,7 @@
         <div class="app-list">
           <article class="card app-entry" id="grocery" aria-labelledby="grocery-name">
             <div class="app-head">
-              <div class="icon-tile" data-icon="bag" data-size="26"></div>
+              <span data-tile="grocery" data-size="64"></span>
               <div>
                 <h3 id="grocery-name">RushGrocery</h3>
                 <p class="who">For grocery stores, mini-marts and specialty shops</p>
@@ -110,7 +130,7 @@
 
           <article class="card app-entry" id="food" aria-labelledby="food-name">
             <div class="app-head">
-              <div class="icon-tile" data-icon="food" data-size="26"></div>
+              <span data-tile="food" data-size="64"></span>
               <div>
                 <h3 id="food-name">RushFood</h3>
                 <p class="who">For restaurants and food providers</p>
@@ -128,7 +148,7 @@
 
           <article class="card app-entry" id="pharma" aria-labelledby="pharma-name">
             <div class="app-head">
-              <div class="icon-tile" data-icon="pill" data-size="26"></div>
+              <span data-tile="pharmacy" data-size="64"></span>
               <div>
                 <h3 id="pharma-name">RushPharma</h3>
                 <p class="who">For licensed pharmacies</p>
@@ -146,7 +166,7 @@
 
           <article class="card app-entry" id="cargo" aria-labelledby="cargo-name">
             <div class="app-head">
-              <div class="icon-tile" data-icon="truck" data-size="26"></div>
+              <span data-tile="truck" data-size="64"></span>
               <div>
                 <h3 id="cargo-name">RushCargo</h3>
                 <p class="who">For drivers who deliver RUSH orders and cargo bookings</p>
@@ -161,9 +181,46 @@
             <div data-store-badges="cargo" aria-label="Download RushCargo"></div>
           </article>
 
+          <article class="card app-entry" id="transpo" aria-labelledby="transpo-name">
+            <div class="app-head">
+              <span data-tile="taxi" data-size="64"></span>
+              <div>
+                <h3 id="transpo-name">RushTranspo</h3>
+                <p class="who">For drivers who take passengers: motorcycle taxi, tricycle and car</p>
+              </div>
+            </div>
+            <ul class="checks">
+              <li><span data-icon="check-circle" data-size="20"></span>Apply with your driver's licence, OR/CR, NBI clearance and a selfie check. RUSH reviews every application before you go online.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Go online to receive ride offers your vehicle can take, nearest first, with the pickup, drop-off, fare and payout shown before you accept.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Navigate to the pickup, start the ride with the passenger's 4-digit boarding code, and complete it at drop-off.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Online fares are paid out to your payout account. Cash fares are yours at drop-off; a small commission on each cash ride is settled through RushPay.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Also drive cargo? One driver profile covers RushCargo and RushTranspo.</li>
+            </ul>
+            <div data-store-badges="transpo" aria-label="Download RushTranspo"></div>
+            <a class="portal" href="transpo.html">About RushTranspo <span data-icon="arrow-right" data-size="16"></span></a>
+          </article>
+
+          <article class="card app-entry" id="essentials" aria-labelledby="essentials-name">
+            <div class="app-head">
+              <span data-tile="tools" data-size="64"></span>
+              <div>
+                <h3 id="essentials-name">RushEssentials</h3>
+                <p class="who">For hardware, appliance, parts, electrical and apparel stores</p>
+              </div>
+            </div>
+            <ul class="checks">
+              <li><span data-icon="check-circle" data-size="20"></span>Register with your business permit and store details, and choose your trade: appliances and electronics, automotive, motorcycle parts, hardware and construction, electrical and home depot, clothing and apparel, or others.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Build your catalogue with prices, stock, photos, brand, model and warranty, and the weight and size of each item.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Receive paid orders live, accept and prepare them, and hand them to a RushCargo driver whose vehicle fits the load.</li>
+              <li><span data-icon="check-circle" data-size="20"></span>Create vouchers and follow sales, reviews and payouts to your payout account.</li>
+            </ul>
+            <div data-store-badges="essentials" aria-label="Download RushEssentials"></div>
+            <a class="portal" href="essentials.html">About RushEssentials <span data-icon="arrow-right" data-size="16"></span></a>
+          </article>
+
           <article class="card app-entry" id="doctor" aria-labelledby="doctor-name">
             <div class="app-head">
-              <div class="icon-tile" data-icon="doctor" data-size="26"></div>
+              <span data-tile="doctor" data-size="64"></span>
               <div>
                 <h3 id="doctor-name">RushDoctor</h3>
                 <p class="who">For licensed doctors</p>
@@ -181,7 +238,7 @@
 
           <article class="card app-entry" id="clinic" aria-labelledby="clinic-name">
             <div class="app-head">
-              <div class="icon-tile" data-icon="clinic" data-size="26"></div>
+              <span data-tile="clinic" data-size="64"></span>
               <div>
                 <h3 id="clinic-name">RushClinic</h3>
                 <p class="who">For clinics, laboratories and hospitals</p>

@@ -27,6 +27,8 @@ window.RUSH_SITE_CONFIG = {
     food: { google: '', apple: '' },
     pharma: { google: '', apple: '' },
     cargo: { google: '', apple: '' },
+    transpo: { google: '', apple: '' },
+    essentials: { google: '', apple: '' },
     doctor: { google: '', apple: '' },
     clinic: { google: '', apple: '' },
   },

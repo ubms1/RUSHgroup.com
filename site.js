@@ -52,9 +52,11 @@
     breach_policy: 'In case of a personal data breach that is likely to result in serious harm, we notify the National Privacy Commission and affected individuals within 72 hours.',
   };
   const NAV = [
-    { id: 'home', href: 'index.html', label: 'Home' },
+    { id: 'home', href: 'index.html', label: 'Home', home: true },
     { id: 'groceries', href: 'groceries.html', label: 'Groceries' },
     { id: 'food', href: 'food.html', label: 'Food' },
+    { id: 'transpo', href: 'transpo.html', label: 'Transpo' },
+    { id: 'essentials', href: 'essentials.html', label: 'Essentials' },
     { id: 'cargo', href: 'cargo.html', label: 'Cargo' },
     { id: 'pay', href: 'pay.html', label: 'RushPay' },
     { id: 'medz', medz: '', label: 'RushMedz' },
@@ -65,6 +67,8 @@
   const SERVICES = [
     { href: 'groceries.html', label: 'Groceries' },
     { href: 'food.html', label: 'Food' },
+    { href: 'transpo.html', label: 'Transpo' },
+    { href: 'essentials.html', label: 'Essentials' },
     { href: 'cargo.html', label: 'Cargo' },
     { href: 'pay.html', label: 'RushPay' },
     { medz: '', label: 'RushMedz' },
@@ -74,32 +78,40 @@
   // Mobile apps, keyed like RUSH_SITE_CONFIG.STORES. Each has an anchor on apps.html.
   const APPS = [
     ['app', 'RUSH app'], ['pay', 'RushPay'], ['grocery', 'RushGrocery'], ['food', 'RushFood'],
-    ['pharma', 'RushPharma'], ['cargo', 'RushCargo'], ['doctor', 'RushDoctor'], ['clinic', 'RushClinic'],
+    ['pharma', 'RushPharma'], ['cargo', 'RushCargo'], ['transpo', 'RushTranspo'], ['essentials', 'RushEssentials'],
+    ['doctor', 'RushDoctor'], ['clinic', 'RushClinic'],
   ];
   const APP_NAME = Object.fromEntries(APPS);
   const STORES = {
     google: { live: 'Get it on', soon: 'Coming soon to', name: 'Google Play' },
     apple: { live: 'Download on the', soon: 'Coming soon to the', name: 'App Store' },
   };
+  // Industry cards; `tile` names a 3D clay tile from assets/rush-icons.js.
   const INDUSTRIES = [
-    { id: 'groceries', icon: 'bag', title: 'Groceries and retail', href: 'groceries.html', more: 'Groceries on RUSH',
+    { id: 'groceries', tile: 'grocery', title: 'Groceries and retail', href: 'groceries.html', more: 'Groceries on RUSH',
       text: 'Grocery stores, mini-marts and specialty shops sell to customers near them. Stores run orders, products and stock in RushGrocery.' },
-    { id: 'food', icon: 'food', title: 'Restaurants and food', href: 'food.html', more: 'Food on RUSH',
+    { id: 'food', tile: 'food', title: 'Restaurants and food', href: 'food.html', more: 'Food on RUSH',
       text: 'Restaurants and food providers take orders, keep their menu up to date and hand meals to RushCargo riders, all in RushFood.' },
-    { id: 'pharmacy', icon: 'pill', title: 'Pharmacies', medz: 'pharmacy.html', more: 'Pharmacy on RushMedz',
+    { id: 'transpo', tile: 'taxi', title: 'Rides', href: 'transpo.html', more: 'RushTranspo',
+      text: 'RushTranspo is ride-hailing in Tuguegarao City and across Cagayan Valley: motorcycle taxi, tricycle or car, with the fare shown before you book.' },
+    { id: 'essentials', tile: 'tools', title: 'Hardlines and hard goods', href: 'essentials.html', more: 'RushEssentials',
+      text: 'Appliances, auto and motorcycle parts, hardware, electrical supplies and apparel from RushEssentials stores, delivered in a vehicle that can carry them.' },
+    { id: 'pharmacy', tile: 'pharmacy', title: 'Pharmacies', medz: 'pharmacy.html', more: 'Pharmacy on RushMedz',
       text: 'Licensed pharmacies sell medicines through RushPharma. The pharmacist checks every prescription order before accepting it.' },
-    { id: 'cargo', icon: 'truck', title: 'Logistics and cargo', href: 'cargo.html', more: 'RushCargo',
-      text: 'RushCargo drivers deliver every RUSH order and move any item a customer books, in a vehicle that can carry it.' },
-    { id: 'health', icon: 'doctor', title: 'Health care', medz: '', more: 'Visit RushMedz',
+    { id: 'cargo', tile: 'truck', title: 'Logistics and cargo', href: 'cargo.html', more: 'RushCargo',
+      text: 'RushCargo drivers deliver every RUSH order, including heavy essentials, and move any item a customer books, in a vehicle that can carry it.' },
+    { id: 'health', tile: 'doctor', title: 'Health care', medz: '', more: 'Visit RushMedz',
       text: 'Doctors, clinics, laboratories and hospitals take bookings for video and in-person care through RushMedz, RushDoctor and RushClinic.' },
-    { id: 'pay', icon: 'send', title: 'Payments and remittance', href: 'pay.html', more: 'About RushPay', gold: true,
+    { id: 'pay', tile: 'pay', title: 'Payments and remittance', href: 'pay.html', more: 'About RushPay',
       text: 'RushPay sends money at home and abroad, pays bills, buys prepaid load and takes payment for every RUSH order, delivery and appointment.' },
-    { id: 'ads', icon: 'broadcast', title: 'Advertising', href: 'ads.html', more: 'About RushAds', gold: true,
+    { id: 'ads', tile: 'ads', title: 'Advertising', href: 'ads.html', more: 'About RushAds',
       text: 'RushAds helps merchants, health providers and brands reach the people who use RUSH.' },
   ];
 
   const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const icon = (name, size) => (window.RushIcons ? window.RushIcons.icon(name, size) : '');
+  // A 3D clay tile as inline SVG. The [data-tile] box is sized in CSS, so the SVG only fills it.
+  const tile = (name, size) => (window.RushIcons && window.RushIcons.tile ? window.RushIcons.tile(name, size || 56) : '');
   const money = (n) => '₱' + (Number(n) || 0).toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -151,11 +163,13 @@
       if (n.medz !== undefined) {
         return `<a ${navHref(n)} class="ext" title="RushMedz medical services website">${esc(n.label)}${icon('arrow-right', 14)}</a>`;
       }
-      return `<a ${navHref(n)}${current}>${esc(n.label)}</a>`;
+      // The Home link shows only in the collapsed menu; the brand is the home link on wide screens.
+      return `<a ${navHref(n)}${current}${n.home ? ' class="nav-home"' : ''}>${esc(n.label)}</a>`;
     }).join('');
     host.innerHTML = `<div class="wrap">
-        <a class="brand" href="index.html" aria-label="RUSH home"><img src="${LOGO}" alt="RUSH logo" width="44" height="44"><span>RUSH<small>Everything, Delivered</small></span></a>
+        <a class="brand" href="index.html" aria-label="RUSH home"><img src="${LOGO}" alt="RUSH logo" width="44" height="44" decoding="async"><span>RUSH<small>Everything, Delivered</small></span></a>
         <nav class="nav" id="site-nav" aria-label="Main">${links}</nav>
+        <a class="btn btn-primary btn-sm nav-cta" href="apps.html">Get the app</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">${icon('menu', 22)}</button>
       </div>`;
     const btn = $('.nav-toggle', host);
@@ -189,8 +203,8 @@
     const apps = APPS.map(([key, name]) => `<a href="apps.html#${key}">${esc(name)}</a>`).join('');
     host.innerHTML = `<div class="wrap">
         <div>
-          <a class="brand" href="index.html"><img src="${LOGO}" alt="" width="46" height="46"><span>RUSH<small>Everything, Delivered</small></span></a>
-          <p style="margin-top:14px;color:rgba(255,255,255,.7)">One account for groceries, food, pharmacy, cargo delivery and health care in the Philippines, with RushPay for payments, remittance, bills and load.</p>
+          <a class="brand" href="index.html"><img src="${LOGO}" alt="" width="46" height="46" loading="lazy" decoding="async"><span>RUSH<small>Everything, Delivered</small></span></a>
+          <p class="about">One account for groceries, food, rides, hard goods, pharmacy, cargo delivery and health care in the Philippines, with RushPay for payments, remittance, bills and load.</p>
         </div>
         <div><h3>Services</h3>${services}</div>
         <div><h3>Apps</h3>${apps}</div>
@@ -201,7 +215,7 @@
           <a href="privacy.html#request">Make a privacy request</a>
           <a href="mailto:${esc(SUPPORT_EMAIL)}" data-company="support_email">${esc(SUPPORT_EMAIL)}</a>
         </div>
-        <div class="fine"><p data-copyright>RUSH · Compliant with the Data Privacy Act of 2012 (RA 10173). Vending machines are coming soon.</p></div>
+        <div class="fine"><p data-copyright>RUSH · Compliant with the Data Privacy Act of 2012 (RA 10173). Vending machines are coming soon.</p><p>Apps are available only through Google Play and the App Store.</p></div>
       </div>`;
     const year = $('[data-copyright]', host);
     if (year) year.textContent = `© ${new Date().getFullYear()} RUSH · Compliant with the Data Privacy Act of 2012 (RA 10173). Vending machines are coming soon.`;
@@ -212,7 +226,7 @@
     $$('[data-industries]').forEach((host) => {
       const skip = host.dataset.industries;
       host.innerHTML = INDUSTRIES.filter((x) => x.id !== skip).map((x) => `<a class="card" ${x.medz !== undefined ? medzAttrs(x.medz) : `href="${esc(x.href)}"`}>
-          <div class="icon-tile${x.gold ? ' gold' : ''}">${icon(x.icon, 26)}</div>
+          <span data-tile="${esc(x.tile)}" data-size="64">${tile(x.tile, 64)}</span>
           <h3>${esc(x.title)}</h3>
           <p>${esc(x.text)}</p>
           <span class="more">${esc(x.more)} ${icon('arrow-right', 16)}</span>
@@ -227,6 +241,13 @@
   function hydrateIcons(root = document) {
     $$('[data-icon]', root).forEach((el) => {
       el.innerHTML = icon(el.dataset.icon, Number(el.dataset.size) || 24);
+    });
+  }
+
+  // Fills each empty [data-tile] box with its 3D clay tile.
+  function hydrateTiles(root = document) {
+    $$('[data-tile]', root).forEach((el) => {
+      if (!el.firstElementChild) el.innerHTML = tile(el.dataset.tile, Number(el.dataset.size) || 56);
     });
   }
 
@@ -258,7 +279,7 @@
       if (Array.isArray(r.items) && r.items.length) items = r.items;
     } catch (_) { /* the built-in list is shown */ }
     host.innerHTML = items.map((v) => `<article class="card vehicle">
-          <div class="icon-tile">${icon(/^(MOTORCYCLE|TRICYCLE)$/.test(v.code) ? 'bike' : /^(SEDAN|SUV|MPV)$/.test(v.code) ? 'car' : 'truck', 24)}</div>
+          <span data-tile data-size="56">${tile(/^(MOTORCYCLE|TRICYCLE)$/.test(v.code) ? 'bike' : /^(SEDAN|SUV|MPV)$/.test(v.code) ? 'car' : 'truck', 56)}</span>
           <h3>${esc(v.name)}</h3>
           <span class="cap">Up to ${esc(fmt(v.max_kg))} kg</span>
           ${v.dims ? `<span class="dims">Cargo space ${esc(v.dims)}</span>` : ''}
@@ -408,6 +429,7 @@
   renderFooter();
   renderIndustries();
   hydrateIcons();
+  hydrateTiles();
   renderStoreBadges();
   applyMedzLinks();
   bindForms();

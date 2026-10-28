@@ -4,13 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#1d4f91">
-  <meta name="description" content="Contact RUSH about your account, an order, a delivery, a payment or anything else.">
+  <meta name="description" content="Contact RUSH about your account, an order, a ride, a delivery, a payment or anything else.">
   <title>Contact · RUSH</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUSH">
+  <meta property="og:title" content="Contact · RUSH">
+  <meta property="og:description" content="Contact RUSH about your account, an order, a ride, a delivery, a payment or anything else.">
+  <meta property="og:url" content="https://ubms1.github.io/RUSHgroup.com/contact.html">
+  <meta property="og:image" content="https://ubms1.github.io/RUSHgroup.com/assets/rush-logo.png">
+  <meta property="og:image:alt" content="RUSH logo">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="site.css">
 </head>
 <body data-page="contact">
@@ -18,12 +27,32 @@
   <header class="site-head" data-site-head></header>
 
   <main id="main">
-    <section class="section" aria-labelledby="page-title">
-      <div class="wrap grid-2">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap">
         <div>
           <p class="eyebrow">Contact</p>
           <h1 id="page-title">We are here to help</h1>
-          <p class="lead">Send us a message about your account, an order, a delivery, a payment or a health service. For anything urgent in the app, use the support option in the RUSH app.</p>
+          <p class="lead">Send us a message about your account, an order, a ride, a delivery, a payment or a health service. For anything urgent in the app, use the support option in the RUSH app.</p>
+          <div class="btn-row">
+            <a class="btn btn-light" href="#message">Send a message</a>
+            <a class="btn btn-outline-light" href="privacy.html#request">Make a privacy request</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="float-tile t1"><span data-tile="bell" data-size="88"></span></span>
+          <span class="float-tile t2"><span data-tile="shield" data-size="88"></span></span>
+          <div class="hero-logo"><img src="assets/rush-logo.png" alt="" width="300" height="300" decoding="async" fetchpriority="high"></div>
+          <span class="float-tile t3"><span data-tile="clock" data-size="88"></span></span>
+          <span class="float-tile t4"><span data-tile="pin" data-size="88"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="message" aria-labelledby="message-title">
+      <div class="wrap grid-2">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="message-title">Tell us what you need</h2>
           <ul class="checks" style="margin-top:24px">
             <li hidden><span data-icon="mail" data-size="20"></span><span>Email: <a href="mailto:" data-company="support_email"></a></span></li>
             <li hidden><span data-icon="phone" data-size="20"></span><span data-company="support_phone"></span></li>
@@ -58,6 +87,7 @@
                   <option value="General">General question</option>
                   <option value="Order">An order</option>
                   <option value="Delivery or cargo">A delivery or cargo booking</option>
+                  <option value="Ride">A ride (RushTranspo)</option>
                   <option value="Payment or RushPay">Payment or RushPay</option>
                   <option value="Account">My account</option>
                   <option value="Health service">A health service (RushMedz)</option>
@@ -84,14 +114,14 @@
     <section class="section tint" aria-labelledby="apps-help-title">
       <div class="wrap grid-2">
         <div class="card">
-          <div class="icon-tile" data-icon="chat" data-size="26"></div>
+          <span data-tile="bell" data-size="64"></span>
           <h2 id="apps-help-title" style="font-size:1.35rem">Help inside the apps</h2>
           <p>Signed-in users can contact support from the account menu in every RUSH app, including RushPay. The request is linked to your account, so you do not need to repeat your details.</p>
           <div data-store-badges="app" aria-label="Download the RUSH app"></div>
           <div data-store-badges="pay" aria-label="Download RushPay"></div>
         </div>
         <div class="card">
-          <div class="icon-tile gold" data-icon="store" data-size="26"></div>
+          <span data-tile="star" data-size="64"></span>
           <h2 style="font-size:1.35rem">For partners</h2>
           <p>Stores, restaurants, pharmacies, drivers, doctors and health facilities each have a partner app on Google Play and the App Store, with the same RUSH account.</p>
           <a class="portal" href="apps.html#partners">See the partner apps <span data-icon="arrow-right" data-size="16"></span></a>

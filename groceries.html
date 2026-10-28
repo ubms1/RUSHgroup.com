@@ -8,9 +8,18 @@
   <title>Groceries · RUSH</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUSH">
+  <meta property="og:title" content="Groceries · RUSH">
+  <meta property="og:description" content="Shop groceries from stores near you in the RUSH app, delivered by RushCargo and paid through RushPay. Grocery stores sell on RUSH with RushGrocery.">
+  <meta property="og:url" content="https://ubms1.github.io/RUSHgroup.com/groceries.html">
+  <meta property="og:image" content="https://ubms1.github.io/RUSHgroup.com/assets/rush-logo.png">
+  <meta property="og:image:alt" content="RUSH logo">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="site.css">
 </head>
 <body data-page="groceries">
@@ -18,20 +27,29 @@
   <header class="site-head" data-site-head></header>
 
   <main id="main">
-    <section class="section" aria-labelledby="page-title">
+    <section class="hero" aria-labelledby="page-title">
       <div class="wrap">
-        <p class="eyebrow">Groceries and retail</p>
-        <h1 id="page-title">Groceries from stores near you</h1>
-        <p class="lead">Shop from grocery stores, mini-marts and specialty shops that deliver to you. See what is in stock, add what you need, apply a promo code and pay through RushPay. A RushCargo rider brings your order to your door.</p>
-        <div data-store-badges="app" aria-label="Download the RUSH app"></div>
-        <p class="note">Shopping happens in the RUSH app, on Android and iPhone.</p>
+        <div>
+          <p class="eyebrow">Groceries and retail</p>
+          <h1 id="page-title">Groceries from stores near you</h1>
+          <p class="lead">Shop from grocery stores, mini-marts and specialty shops that deliver to you. See what is in stock, add what you need, apply a promo code and pay through RushPay. A RushCargo rider brings your order to your door.</p>
+          <div data-store-badges="app" aria-label="Download the RUSH app"></div>
+          <p class="note">Shopping happens in the RUSH app, on Android and iPhone.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="float-tile t1"><span data-tile="grocery" data-size="88"></span></span>
+          <span class="float-tile t2"><span data-tile="box" data-size="88"></span></span>
+          <div class="hero-logo"><img src="assets/rush-logo.png" alt="" width="300" height="300" decoding="async" fetchpriority="high"></div>
+          <span class="float-tile t3"><span data-tile="bike" data-size="88"></span></span>
+          <span class="float-tile t4"><span data-tile="promo" data-size="88"></span></span>
+        </div>
       </div>
     </section>
 
     <section class="section tint" aria-labelledby="shop-title">
       <div class="wrap grid-2">
         <div class="card">
-          <div class="icon-tile" data-icon="bag" data-size="26"></div>
+          <span data-tile="grocery" data-size="64"></span>
           <h2 id="shop-title" style="font-size:1.4rem">How shopping works</h2>
           <ul class="checks" style="margin-top:12px">
             <li><span data-icon="check-circle" data-size="20"></span>Stores show their categories, whether they are open, and the delivery radius they serve.</li>
@@ -42,7 +60,7 @@
           </ul>
         </div>
         <div class="card">
-          <div class="icon-tile gold" data-icon="store" data-size="26"></div>
+          <span data-tile="box" data-size="64"></span>
           <h2 id="store-title" style="font-size:1.4rem">For grocery stores</h2>
           <p>RushGrocery is the store app. A store owner can:</p>
           <ul class="checks" style="margin-top:12px">

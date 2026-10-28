@@ -8,9 +8,18 @@
   <title>Cargo · RUSH</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUSH">
+  <meta property="og:title" content="RushCargo · Cargo and delivery · RUSH">
+  <meta property="og:description" content="RushCargo delivers items across the Philippines. Choose the vehicle that fits your load, book in the RUSH app and pay through RushPay. Drivers work with the RushCargo app.">
+  <meta property="og:url" content="https://ubms1.github.io/RUSHgroup.com/cargo.html">
+  <meta property="og:image" content="https://ubms1.github.io/RUSHgroup.com/assets/rush-logo.png">
+  <meta property="og:image:alt" content="RUSH logo">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="site.css">
 </head>
 <body data-page="cargo">
@@ -18,20 +27,30 @@
   <header class="site-head" data-site-head></header>
 
   <main id="main">
-    <section class="section" aria-labelledby="page-title">
+    <section class="hero" aria-labelledby="page-title">
       <div class="wrap">
-        <p class="eyebrow">Logistics and cargo</p>
-        <h1 id="page-title">Move items from one place to another</h1>
-        <p class="lead">RushCargo is the logistics arm of RUSH. It delivers every order from RUSH stores, restaurants and pharmacies, and you can book it to move any item you need, from a motorcycle for a small parcel to a large van for bulk stock. Follow it until it is delivered.</p>
-        <div data-store-badges="app" aria-label="Download the RUSH app"></div>
-        <p class="note">Book cargo in the RUSH app. Drivers use the RushCargo app.</p>
+        <div>
+          <p class="eyebrow">Logistics and cargo</p>
+          <h1 id="page-title">Move items from one place to another</h1>
+          <p class="lead">RushCargo is the logistics arm of RUSH. It delivers every order from RUSH stores, restaurants and pharmacies, and you can book it to move any item you need, from a motorcycle for a small parcel to a large van for bulk stock. Follow it until it is delivered.</p>
+          <p class="lead">Store orders, including heavy <a href="essentials.html">RushEssentials</a> goods such as appliances and construction materials, ride on RushCargo in a vehicle matched to their weight and size.</p>
+          <div data-store-badges="app" aria-label="Download the RUSH app"></div>
+          <p class="note">Book cargo in the RUSH app. Drivers use the RushCargo app.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <span class="float-tile t1"><span data-tile="truck" data-size="88"></span></span>
+          <span class="float-tile t2"><span data-tile="box" data-size="88"></span></span>
+          <div class="hero-logo"><img src="assets/rush-logo.png" alt="" width="300" height="300" decoding="async" fetchpriority="high"></div>
+          <span class="float-tile t3"><span data-tile="bike" data-size="88"></span></span>
+          <span class="float-tile t4"><span data-tile="pin" data-size="88"></span></span>
+        </div>
       </div>
     </section>
 
     <section class="section tint" aria-labelledby="rule-title">
       <div class="wrap">
         <div class="callout" role="note">
-          <strong id="rule-title">RushCargo moves items only.</strong> People, animals, weapons and illegal or dangerous goods are never carried. Bookings that break this rule are refused.
+          <strong id="rule-title">RushCargo moves items only.</strong> People, animals, weapons and illegal or dangerous goods are never carried. Bookings that break this rule are refused. For passenger rides, use <a href="transpo.html">RushTranspo</a>.
         </div>
       </div>
     </section>
@@ -56,7 +75,7 @@
     <section class="section tint" aria-labelledby="book-title">
       <div class="wrap grid-2">
         <div class="card">
-          <div class="icon-tile" data-icon="box" data-size="26"></div>
+          <span data-tile="box" data-size="64"></span>
           <h2 id="book-title" style="font-size:1.4rem">How booking works</h2>
           <ol class="steps" style="grid-template-columns:1fr;margin-top:16px">
             <li><h3>Set the pickup and drop-off</h3><p>Enter both addresses. The distance and fare are calculated before you book.</p></li>
@@ -66,7 +85,7 @@
           </ol>
         </div>
         <div class="card">
-          <div class="icon-tile gold" data-icon="id" data-size="26"></div>
+          <span data-tile="bike" data-size="64"></span>
           <h2 id="driver-title" style="font-size:1.4rem">Become a RushCargo driver</h2>
           <p>Drivers apply in the RushCargo app with their licence, vehicle and documents. Once approved, you go online when you are ready to work and see the jobs your vehicle can carry near you. You can filter jobs by distance, and your earnings are paid out to the bank, GCash or Maya account you add.</p>
           <div data-store-badges="cargo" aria-label="Download RushCargo"></div>

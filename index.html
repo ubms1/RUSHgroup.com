@@ -4,13 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#1d4f91">
-  <meta name="description" content="RUSH is one account for groceries, food, pharmacy, cargo delivery and health care in the Philippines, with RushPay for payments, remittance, bills and load.">
+  <meta name="description" content="RUSH is one account for groceries, food, rides, hard goods, pharmacy, cargo delivery and health care in the Philippines, with RushPay for payments, remittance, bills and load.">
   <title>RUSH · Everything, Delivered</title>
   <link rel="icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUSH">
+  <meta property="og:title" content="RUSH · Everything, Delivered">
+  <meta property="og:description" content="One account for groceries, food, rides, hard goods, pharmacy, cargo delivery and health care in the Philippines, with RushPay for payments, remittance, bills and load.">
+  <meta property="og:url" content="https://ubms1.github.io/RUSHgroup.com/">
+  <meta property="og:image" content="https://ubms1.github.io/RUSHgroup.com/assets/rush-logo.png">
+  <meta property="og:image:alt" content="RUSH logo">
+  <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="site.css">
 </head>
 <body data-page="home">
@@ -22,10 +31,10 @@
       <div class="wrap">
         <div>
           <p class="eyebrow">One account · Everything, delivered</p>
-          <h1 id="hero-title">Groceries, food, cargo, health care and payments, in one RUSH account.</h1>
-          <p class="lead">Order from stores, restaurants and pharmacies near you, book a delivery for any item, book a doctor, clinic or lab through RushMedz, and pay through RushPay. Every service runs on the same account and the same RushCargo drivers.</p>
+          <h1 id="hero-title">Groceries, food, rides, cargo, health care and payments, in one RUSH account.</h1>
+          <p class="lead">Order from stores, restaurants and pharmacies near you, book a ride with RushTranspo, get appliances and hardware from RushEssentials, book a delivery for any item, book a doctor, clinic or lab through RushMedz, and pay through RushPay. Every service runs on the same account and the same RushCargo drivers.</p>
           <div data-store-badges="app" aria-label="Download the RUSH app"></div>
-          <p class="note" style="color:rgba(255,255,255,.8)">The RUSH app is for groceries, food, pharmacy, cargo and health. RushPay, for sending money, paying bills and buying load, is a separate app.</p>
+          <p class="note">The RUSH app is for groceries, food, rides, essentials, pharmacy, cargo and health. RushPay, for sending money, paying bills and buying load, is a separate app.</p>
           <div class="btn-row">
             <a class="btn btn-outline-light" href="apps.html">See all RUSH apps</a>
             <a class="btn btn-outline-light" href="pay.html">About RushPay</a>
@@ -33,15 +42,23 @@
           <div class="chips" aria-label="Services on RUSH">
             <span class="chip"><span data-icon="bag" data-size="16"></span>Groceries</span>
             <span class="chip"><span data-icon="food" data-size="16"></span>Food</span>
+            <span class="chip"><span data-icon="car" data-size="16"></span>Rides</span>
+            <span class="chip"><span data-icon="box" data-size="16"></span>Essentials</span>
             <span class="chip"><span data-icon="pill" data-size="16"></span>Pharmacy</span>
             <span class="chip"><span data-icon="truck" data-size="16"></span>Cargo</span>
             <span class="chip"><span data-icon="doctor" data-size="16"></span>Health</span>
             <span class="chip"><span data-icon="send" data-size="16"></span>RushPay</span>
           </div>
         </div>
-        <div class="hero-card">
-          <img src="assets/rush-logo.png" alt="RUSH, Everything, Delivered" width="300" height="300">
-          <p>Sign in once. The same account works in every RUSH app.</p>
+        <div class="hero-side">
+          <div class="hero-art" aria-hidden="true">
+            <span class="float-tile t1"><span data-tile="grocery" data-size="88"></span></span>
+            <span class="float-tile t2"><span data-tile="food" data-size="88"></span></span>
+            <div class="hero-logo"><img src="assets/rush-logo.png" alt="" width="300" height="300" decoding="async" fetchpriority="high"></div>
+            <span class="float-tile t3"><span data-tile="truck" data-size="88"></span></span>
+            <span class="float-tile t4"><span data-tile="pay" data-size="88"></span></span>
+          </div>
+          <p class="hero-caption">Sign in once. The same account works in every RUSH app.</p>
         </div>
       </div>
     </section>
@@ -92,7 +109,7 @@
           </li>
           <li>
             <h3>Choose a service</h3>
-            <p>Pick a store, a restaurant, a pharmacy, a cargo booking or a health service. Prices and delivery fees are shown before you pay.</p>
+            <p>Pick a store, a restaurant, a pharmacy, a ride, an essentials shop, a cargo booking or a health service. Prices, fares and delivery fees are shown before you pay.</p>
           </li>
           <li>
             <h3>Pay and follow it live</h3>
@@ -100,7 +117,7 @@
           </li>
         </ol>
         <div class="callout" style="margin-top:28px">
-          <strong>Every booking goes to RushCargo.</strong> Orders from RUSH stores, restaurants and pharmacies, and cargo bookings, are sent automatically to nearby RushCargo drivers. Each order is matched to a vehicle that fits its weight and size.
+          <strong>Every delivery goes to RushCargo.</strong> Orders from RUSH stores, restaurants, pharmacies and essentials shops, and cargo bookings, are sent automatically to nearby RushCargo drivers. Each order is matched to a vehicle that fits its weight and size. Rides go to verified RushTranspo drivers the same way.
         </div>
       </div>
     </section>
@@ -117,20 +134,20 @@
         </div>
         <div class="grid-2">
           <article class="card">
-            <div class="icon-tile" data-icon="home" data-size="26"></div>
+            <span data-tile="grocery" data-size="64"></span>
             <h3>RUSH app</h3>
-            <p>Shop groceries, food and medicines, book cargo deliveries, and book doctors, clinics and labs.</p>
+            <p>Shop groceries, food, medicines and hard goods, book rides and cargo deliveries, and book doctors, clinics and labs.</p>
             <div data-store-badges="app"></div>
           </article>
           <article class="card">
-            <div class="icon-tile gold" data-icon="send" data-size="26"></div>
+            <span data-tile="pay" data-size="64"></span>
             <h3>RushPay</h3>
             <p>Send money at home and abroad, pay bills, buy prepaid load and receive money with a real-time QR code. RushPay also takes payment for every RUSH order, delivery and appointment.</p>
             <div data-store-badges="pay"></div>
             <p class="statement">RushPay is a Money Service Business (Remittance and Transfer Company and Remittance Platform Provider). It is not a bank or an electronic money issuer, and it does not hold deposits or stored-value balances.</p>
           </article>
         </div>
-        <p class="note">Run a store, restaurant, pharmacy, delivery vehicle, medical practice or health facility? <a href="apps.html#partners">See the partner apps</a>.</p>
+        <p class="note">Run a store, restaurant, pharmacy, delivery vehicle, ride, hardware or appliance shop, medical practice or health facility? <a href="apps.html#partners">See the partner apps</a>.</p>
       </div>
     </section>
 
